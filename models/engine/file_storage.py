@@ -29,8 +29,7 @@ class FileStorage:
         """
         Serializes the object to json
         """
-       
-       serialized_obj = {}
+        serialized_obj = {}
 
         for key, obj in self.__obj.items():
             serialized_obj[key] = obj.to_dict()
