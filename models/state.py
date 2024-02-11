@@ -3,9 +3,10 @@
 from models.base_model import BaseModel
 
 class State(BaseModel):
-    """creates the state class."""
-
     """
+    creates the state class.
+
+
     Attributes:
         name (str): The name of the state.
     """

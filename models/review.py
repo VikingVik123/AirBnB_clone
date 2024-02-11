@@ -3,7 +3,8 @@
 from models.base_model import BaseModel
 
 class Review(BaseModel):
-    """Created the review.
+    """
+    Created the review class.
 
     Attributes:
         place_id (str): The Place id.

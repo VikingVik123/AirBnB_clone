@@ -5,8 +5,9 @@ Defines the City class
 from models.base_model import BaseModel
 
 class City(BaseModel):
-    """created the city class"""
     """
+    created the city class
+    
     Attributes:
         state_id (str): The state id.
         name (str): The name of the city

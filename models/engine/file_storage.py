@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 import json
+
 """
 Defines the filestorage
 """
@@ -15,10 +16,12 @@ class FileStorage:
         """
         Returns the dictionary object
         """
+
         return self.__obj
 
     def new(self, obj):
         """Sets in __obj the obj with key <obj class name>.id"""
+
         key = "{}.{}".format(obj.__class__.__name__, obj.id)
         self.__obj[key] = obj
 
@@ -26,7 +29,9 @@ class FileStorage:
         """
         Serializes the object to json
         """
-        serialized_obj = {}
+       
+       serialized_obj = {}
+
         for key, obj in self.__obj.items():
             serialized_obj[key] = obj.to_dict()
 
@@ -37,6 +42,7 @@ class FileStorage:
         """
         Deserializes the json to objects
         """
+       
         try:
             with open(self.__file_path, 'r') as f:
                 data = json.load(f)
@@ -44,6 +50,7 @@ class FileStorage:
                 class_name, obj_id = key.split('.')
                 obj_class = getattr(__import__('models'), class_name)
                 self.__obj[key] = obj_class(**obj_dict)
+       
         except FileNotFoundError:
             pass
 
