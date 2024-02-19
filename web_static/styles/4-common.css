@@ -1,0 +1,12 @@
+body {
+    
+    max-width: 1000px;
+    margin: 0;
+    bottom: 30px;
+
+}
+
+.container {
+    max-width: 1000px;
+    margin: 30px auto 30px auto;
+}
